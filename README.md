@@ -1,7 +1,7 @@
 # Pixel-Bucks
 The Instructions are availible in:
 - English: This file
-- [German](link to german readme)
+- [German](https://github.com/MindOfEmi/Pixel-Bucks/blob/master/LIESMICH.md)
 
 # Installation
 1. Install git or clone the Project manualy to check if you have git installed type `git --version` in the cmd windows
