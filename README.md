@@ -1,4 +1,4 @@
-# Pixel-Bucks
+# E-Coins
 The Instructions are availible in:
 - English: This file
 - [German](https://github.com/MindOfEmi/Pixel-Bucks/blob/master/LIESMICH.md)
