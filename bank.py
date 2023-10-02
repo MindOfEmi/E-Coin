@@ -80,7 +80,17 @@ root.title("Pixel-Bucks")
 frame = customtkinter.CTkFrame(master=root)
 frame.pack(pady=20, padx=60, fill="both", expand=True)
 
-label1 = customtkinter.CTkLabel(master=frame, text=f"Your Balance: {balance}")
+with open("userdata.txt", "r") as file:
+    lines = file.readlines()
+    for line in lines:
+        if line.startswith("Benutzername: "):
+            saved_username = line.split(": ")[1].strip()
+        elif line.startswith("Passwort: "):
+            saved_passwort = line.split(": ")[1].strip()
+
+x = c.find_one({"username": saved_username})
+
+label1 = customtkinter.CTkLabel(master=frame, text="Your Balance: " + str(x["balance"]))
 label1.pack(pady=12, padx=10)
 
 entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Amount")
