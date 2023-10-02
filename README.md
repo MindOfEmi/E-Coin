@@ -19,7 +19,7 @@ If you need help, text me at Discord (mindofemi)
 #
 **Q:** Is there an easier way to install the program?
 
-**A:** No, but I might create an .exe file or a setup.exe file
+**A:** No, but I might create an .exe file or a setup.exe file. Update: I will create a install.bat File with the .Tip folder
 #
 **Q:** Can I submit my ideas?
 
