@@ -16,18 +16,27 @@ def login():
     user_password = entry2.get()
 
     if str(c.find_one({"username": user})) != "None" and str(c.find_one({"password": user_password})) != "None":
-        print(f"Starting the Bank System!")
-        os.startfile("bank.py")
-        quit()
+        if os.path.exists("userdata.txt"):
+            print(f"Starting the Bank System!")
+            os.startfile("bankexe.exe")
+            
+        else:
+            with open("userdata.txt", "x") as file:
+                file.write(f"Benutzername: {user}\n")
+                file.write(f"Passwort: {user_password}\n")
+                print(f"Benutzerdaten wurden in die Datei 'userdata.txt' geschrieben.")
+                print(f"Starting the Bank System!")
+                os.startfile("bankexe.exe")
+                
     else:
         print("Wrong Username or Password! Be sure that you have an Account!")
-        print("Please restart!")
-        quit()
+        label2.configure(text="Wrong Username or Password!")
 
 
 def startregister():
     label2.configure(text="Starting register program...")
-    os.startfile("register.py")
+    os.startfile("registerexe.exe")
+    
 
 
 customtkinter.set_appearance_mode("dark")

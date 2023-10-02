@@ -1,5 +1,4 @@
 import os
-
 import customtkinter
 import random
 import string
@@ -47,14 +46,14 @@ def register():
 
     print(f"Welcome {username} to the Banksystem from Pixel-Bucks!")
     label2.configure(text=f"Starting Login System...")
-    os.startfile("login.py")
+    os.startfile("loginexe.exe")
 
     c.insert_one({"_id": generate_id(16),
                   "username": username,
                   "password": password,
                   "balance": 100})
 
-    quit()
+    
 
 
 customtkinter.set_appearance_mode("dark")
